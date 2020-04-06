@@ -22,6 +22,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
+
+        if(Input.GetKey(KeyCode.LeftShift)){
+            speed = 16f;
+        }else{
+           speed = 12f; 
+        }
+
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0){
